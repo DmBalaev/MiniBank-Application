@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: bank-app
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test_db
+    driver-class-name: org.postgresql.Driver
+    username: adm
+    password: 123
+    hikari:
+      transaction-isolation: TRANSACTION_SERIALIZABLE
+
+app:
+  security:
+    jwt:
+      key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+      expiration: 36000000
